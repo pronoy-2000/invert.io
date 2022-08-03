@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Sansita+Swashed&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        min-width: 300px;
+        text-align: center;
+    }
+    h1{
+        font-family: 'Sansita Swashed', cursive;
+    }
+    .yellow{
+        color: #fbe36d;
+    }
+    .blue{
+        color: #5888e4;
+    }
+    p, .button{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.05rem;
+    }
+    .button{
+        background-color: #babff0;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        height: 2rem;
+        width: 4.5rem;
+        border-radius: 1rem;
+        /* animation: backgroundYellow 1s infinite; */
+        cursor: pointer;
+    }
+    .row{
+        padding: 0 0.25rem;
+    }
+    .circle{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 2rem;
+        width: 2rem;
+        border-radius: 50%;
+        background-color: #588BE4;
+        /* animation: moveCircleRight 1s infinite; */
+        pointer-events: none;
+    }
+    @keyframes moveCircleRight{
+        from{
+            left: 0;
+            background-color: #588BE4;
+        }
+        to{
+            left: 100%;
+            transform: translateX(-100%);
+            background-color: #fbe36d;
+        }
+    }
+    @keyframes moveCircleLeft{
+        from{
+            left: 100%;
+            transform: translateX(-100%);
+            background-color: #fbe36d;
+        }
+        to{
+            left: 0;
+            background-color: #588BE4;
+        }
+    }
+    @keyframes backgroundYellow {
+        form{
+            background-color: #8ABFF0;
+        }
+        TO{
+            background-color: #FDFCA3;
+        }
+    }
+    @keyframes backgroundBlue{
+        from{
+            background-color: #FDFCA3;
+        }
+        to{
+            background-color: #8ABFF0;
+        }
+    }
+</style>
+<body class="popup">
+    <h1><span class="yellow">Invert</span><span class="blue">.io</span></h1>
+    <p>Switch to dark mode.Take care of your eyes😎</p>
+    <div class="button">
+        <div class="row">On</div>
+        <div class="row">Off</div>
+        <div class="circle"></div>
+    </div>
+    <script src="./popup.js"></script>
+</body>
+</html>
